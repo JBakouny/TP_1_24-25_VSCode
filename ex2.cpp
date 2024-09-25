@@ -25,9 +25,12 @@ int main() {
     int n = saisir(0,70);
     cout << "Entrez la borne supérieur de cette table de multiplication:" << endl;
     int tableBorneSup = saisir(8,30);
+    cout << "Entrez la borne inférieur de cette table de multiplication:" << endl;
+    int tableBorneInf = saisir(0,8);
+
 
     cout << "Table de multiplication de: " << n << endl;
-    for (int i = tableBorneSup; i >= 0; i--)
+    for (int i = tableBorneSup; i >= tableBorneInf; i--)
     {
         cout << n << " x " << i << " = " << n * i << endl;
     }
