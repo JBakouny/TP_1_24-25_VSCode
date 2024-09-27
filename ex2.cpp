@@ -20,7 +20,7 @@ int saisir(int inf, int sup) {
     return res;
 }
 
-int main() {
+int main_ex2() {
     cout << "Entrez l'entier pour lequel vous vouliez afficher la table de multiplication:" << endl;
     int n = saisir(0,70);
     cout << "Entrez la borne supérieur de cette table de multiplication:" << endl;

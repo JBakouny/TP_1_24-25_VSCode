@@ -15,7 +15,7 @@ void echanger(double & a, double & b, double & x, double & y) {
     y = tmp;
 }
 
-int main() {
+int main_ex1() {
 
     double a = 1.7;
     double b = 3.7;
@@ -29,4 +29,5 @@ int main() {
     echanger(a, b, x, y);
 
     afficher(a, b, x, y);
+    return 0;
 }
