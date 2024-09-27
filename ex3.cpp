@@ -1,5 +1,4 @@
 #include<iostream>
-#include<cmath>
 #include<string>
 using namespace std;
 
@@ -11,8 +10,23 @@ void saisirPoint(const string & nom, int &x, int &y) {
     cin >> y;
 }
 
+double vabs(double x) {
+    if (x < 0) {
+        return -x;
+    }
+    return x;
+}
+
+double racine(double x) {
+    double res = 1;
+    while(vabs((res * res - x)/x) > 1e-3) {
+        res = (res + (x / res))/2;
+    }
+    return res;
+}
+
 double distance(int xa, int ya, int xb, int yb) {
-    return sqrt(pow((xb-xa), 2) + pow((yb-ya), 2));
+    return racine((xb-xa) * (xb-xa) + (yb-ya) * (yb-ya));
 }
 
 int main() {
