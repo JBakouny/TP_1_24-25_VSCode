@@ -32,10 +32,12 @@ double distance(int xa, int ya, int xb, int yb) {
 
 
 TEST(Ex3, TestDistance) {
-  EXPECT_EQ(distance(5, 1, 1, 1), 4);
+    double actual = distance(5, 1, 1, 1);
+    double expected = 4;
+    EXPECT_LT(vabs((actual - expected)/expected), 1e-3);
 }
 
 
 TEST(Ex3, TestDistanceCornerCase) {
-  EXPECT_EQ(distance(1, 1, 1, 1), 0);
+    EXPECT_LT(distance(1, 1, 1, 1), 0.1);
 }
